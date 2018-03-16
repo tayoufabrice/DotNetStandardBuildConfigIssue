@@ -1,6 +1,6 @@
 ﻿namespace DotNetStandardBuildConfigIssue
 {
-    partial class Form1
+    partial class FMain
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // FMain
+            // 
+            this.AllowDrop = true;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(352, 60);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "FMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Drag & Drop File";
+            this.TopMost = true;
+            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.FMain_DragDrop);
+            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.FMain_DragEnter);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
